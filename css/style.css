@@ -1,6 +1,6 @@
 
 :root{--navy:#0a2a66;--ink:#061a42;--gold:#e8b84a;--amber:#ffb020;--bg:#fff;--soft:#f2f5fb;--tx:#16233f;--mut:#56627d}
-*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth;overflow-x:hidden}
 body{font:17px/1.65 "Barlow",system-ui,sans-serif;color:var(--tx);background:var(--bg);overflow-x:hidden}
 h1,h2,h3{font-family:"Barlow Condensed",Impact,sans-serif;line-height:1.02;letter-spacing:.01em;text-transform:uppercase}
 h1{font-size:clamp(2.8rem,9vw,6rem)}h2{font-size:clamp(2rem,5vw,3.4rem);margin-bottom:.5em}h3{font-size:1.6rem;margin-bottom:.3em}
@@ -61,7 +61,7 @@ footer{background:#041230;color:#a9b6d6;padding:48px 0 90px;font-size:.95rem}foo
 .wa svg{width:30px;fill:#fff}@keyframes wp{70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}}
 .rv{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
 @media(max-width:860px){.hero .w,.split{grid-template-columns:1fr}.radar{max-width:300px;order:-1}.steps{grid-template-columns:1fr 1fr;row-gap:30px}.steps .step{padding-top:30px}footer .grid{grid-template-columns:1fr}
-.burger{display:block}nav ul{display:none;position:absolute;left:0;right:0;top:71px;background:#fff;flex-direction:column;padding:10px 4%;border-bottom:3px solid var(--navy)}nav ul.open{display:flex}.nc{display:none}.stats strong{font-size:2.8rem}}
+.burger{display:block}nav ul{display:none;position:absolute;left:0;right:0;top:71px;background:#fff;flex-direction:column;padding:10px 4%;border-bottom:3px solid var(--navy)}nav ul.open{display:flex}.nc{display:none}.stats{gap:8px}.stats strong{font-size:2rem}.stats div{font-size:.85rem;line-height:1.3}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.ln span{transform:none}.rv{opacity:1;transform:none}.car{clip-path:none}.step{opacity:1}.tick{overflow-x:auto}html{scroll-behavior:auto}}
 .gb{background-color:var(--ink);background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:44px 44px}
 .brk{position:relative}.brk::before,.brk::after{content:"";position:absolute;width:34px;height:34px;border:4px solid var(--gold);z-index:2;pointer-events:none}
