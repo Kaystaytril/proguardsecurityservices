@@ -2,7 +2,7 @@
 const R=matchMedia("(prefers-reduced-motion:reduce)").matches;
 document.querySelector(".burger").onclick=e=>{const u=document.querySelector("nav ul");e.target.setAttribute("aria-expanded",u.classList.toggle("open"))};
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.2});
-document.querySelectorAll(".rv,.car").forEach(n=>io.observe(n));
+document.querySelectorAll(".rv").forEach(n=>io.observe(n));const cio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.firstElementChild.classList.add("in");cio.unobserve(e.target)}}),{threshold:.15});document.querySelectorAll(".car").forEach(c=>{const w=document.createElement("div");c.replaceWith(w);w.append(c);cio.observe(w)});
 const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const s=[...e.target.parentNode.children].indexOf(e.target);setTimeout(()=>e.target.classList.add("on"),R?0:s*450);so.unobserve(e.target)}}),{threshold:.6});
 document.querySelectorAll(".step").forEach(n=>so.observe(n));
 const co=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;co.unobserve(e.target);const t=e.target,n=+t.dataset.n,s=t.dataset.s||"";if(R){t.textContent=(t.dataset.p||"")+n+s;return}
